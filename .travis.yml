@@ -37,7 +37,7 @@ before_install:
 before_script:
   - env | sort
   - cd "$OS_NAME/$OS_SUITE"
-  - image="larva/${OS_NAME}:${OS_SUITE}"
+  - image="larvatech/${OS_NAME}:${OS_SUITE}"
 
 script:
   - travis_retry docker build -t "$image" .
@@ -46,15 +46,15 @@ after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
       docker login --username="${DOCKER_REGISTRY_USER}" --password="${DOCKER_REGISTRY_PASSWORD}";
       docker push $image;
-      docker tag $image larva/${OS_NAME}:${OS_VERSION};
-      docker push larva/${OS_NAME}:${OS_VERSION};
+      docker tag $image larvatech/${OS_NAME}:${OS_VERSION};
+      docker push larvatech/${OS_NAME}:${OS_VERSION};
       if [[ "${OS_NAME}" == "ubuntu" && "${OS_SUITE}" == "focal" ]]; then
-        docker tag $image larva/${OS_NAME}:latest;
-        docker push larva/${OS_NAME}:latest;
+        docker tag $image larvatech/${OS_NAME}:latest;
+        docker push larvatech/${OS_NAME}:latest;
       fi;
       if [[ "${OS_NAME}" == "centos" && "${OS_SUITE}" == "2011" ]]; then
-        docker tag $image larva/${OS_NAME}:latest;
-        docker push larva/${OS_NAME}:latest;
+        docker tag $image larvatech/${OS_NAME}:latest;
+        docker push larvatech/${OS_NAME}:latest;
       fi;
     fi;
 
