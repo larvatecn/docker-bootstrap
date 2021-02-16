@@ -2,7 +2,7 @@
 
 	Docker 基础镜像
 
-[![Build Status](https://travis-ci.com/larva/docker-bootstrap.svg?branch=master)](https://travis-ci.com/larva/docker-bootstrap)
+[![Build Status](https://travis-ci.com/larvatech/docker-bootstrap.svg?branch=master)](https://travis-ci.com/larvatech/docker-bootstrap)
 ![](https://img.shields.io/badge/Centos-7-brightgreen.svg)
 ![](https://img.shields.io/badge/Centos-8-brightgreen.svg)
 ![](https://img.shields.io/badge/Ubuntu-trusty-brightgreen.svg) 
