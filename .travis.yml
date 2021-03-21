@@ -1,11 +1,9 @@
-language: bash
+language: shell
 
 os: 
   - linux
 
 dist: xenial
-
-sudo: true
 
 services:
   - docker
